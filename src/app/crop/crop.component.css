@@ -1,0 +1,43 @@
+img {
+    height: 380px;
+    width: 70%;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.cropping-img {
+    width: 50%;
+    height: 380px;
+}
+
+.cropped-img {
+    width: 50%;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.button button {
+    padding: 10px 3px;
+    background-color: rgb(16, 124, 88);
+    color: azure;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.499);
+}
+
+.button button:hover {
+    cursor: pointer;
+    background-color: rgb(10, 94, 66);
+}
