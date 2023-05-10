@@ -1,13 +1,25 @@
-
-<div class="main">
-    <div class="cropping-img">
-        <img src="assets/crop.jpeg" #image alt="" />
-      </div>
-      <div class="cropped-img">
-          <img #targetImage alt=""/>
-      </div>
-      
-</div>
-<div class="button">
-    <button (click)="cropImage()">Crop</button>
-</div>
+<div class="main" #main>
+  <div class="image-div">
+    <img src="assets/crop.jpeg" #image alt="" />
+    <div
+      class="overlay"
+      *ngFor="let cropp of crops"
+      [style.width]="
+        getWidth(cropp.width) + '%'
+      "
+      [style.height]="
+        (cropp.height / mainEl.nativeElement.offsetHeight) * 100 + '%'
+      "
+      [style.left]="((cropp.x / mainEl.nativeElement.offsetWidth) * 100)+8.5 + '%'"
+      [style.top]="(cropp.y / mainEl.nativeElement.offsetHeight) * 100 + '%'"
+    ></div>
+  </div>
+  </div>
+  <div class="buttons">
+    <div class="add-button">
+      <button (click)="addCrop()">Crop</button>
+    </div>
+    <div class="delete-button">
+      <button (click)="deleteAllCrops()">Delete All</button>
+    </div>
+  </div>

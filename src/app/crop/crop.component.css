@@ -1,43 +1,54 @@
-img {
-    height: 380px;
-    width: 70%;
-}
-
 .main {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+  position: relative;
+  background-color: aqua;
 }
 
-.cropping-img {
-    width: 50%;
-    height: 380px;
+.image-div {
+  background-color: cornflowerblue;
 }
 
-.cropped-img {
-    width: 50%;
-    height: 380px;
-    display: flex;
-    justify-content: center;
+.overlay {
+  position: absolute;
+  border: 3px solid grey;
+  background-color: grey;
+  opacity: 1;
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
 }
 
-.button button {
-    padding: 10px 3px;
-    background-color: rgb(16, 124, 88);
-    color: azure;
-    border-radius: 5px;
-    border: none;
-    width: 60%;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.499);
+.add-button,
+.delete-button {
+  width: 45%;
+}
+
+.buttons button {
+  width: 100%;
+  padding: 10px 3px;
+  border-radius: 5px;
+  color: whitesmoke;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.499);
+  border: none;
+}
+
+.add-button button {
+  background-color: rgb(85, 85, 199);
+}
+
+.delete-button button {
+  background-color: red;
 }
 
 .button button:hover {
-    cursor: pointer;
-    background-color: rgb(10, 94, 66);
+  cursor: pointer;
+  background-color: rgb(10, 94, 66);
+}
+
+
+@media screen and (max-width:900px) {
+  
 }
